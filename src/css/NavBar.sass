@@ -1,29 +1,29 @@
-header 
+header
   width: 100%
   position: sticky
   top: 0
   z-index: 890
 
-  #navbar 
+  #navbar
     display: flex
     width: 100%
     height: 10vh
     padding: 0.625rem
-    background: linear-gradient(var(--Base), var(--Base2))
+    background: linear-gradient(var(--Base), transparent)
     justify-content: space-between
 
-    #header_profile_picture 
+    #header_profile_picture
       margin-left: 50px
       height: fit-content
       display: flex
       text-decoration: none
 
-      #profile_picture_image 
+      #profile_picture_image
         width: 7.5vh
         height: 7.5vh
         object-fit: cover
       
-  .header_user_menu 
+  .header_user_menu
     display: flex
     align-items: center
     justify-content: center
@@ -31,7 +31,7 @@ header
     margin: 20px 100px 20px 50px
     transition: all 0.3s ease
 
-    a 
+    a
       position: relative
       height: -moz-fit-content
       height: fit-content
@@ -40,7 +40,7 @@ header
       font-size: 1.5rem
       color: var(--Text)
     
-    a > span 
+    a > span
       position: absolute
       bottom: 0
       left: 50%
@@ -48,20 +48,22 @@ header
       border-bottom: solid 2px var(--Text)
       transition: all 0.3s ease
     
-    a > i 
+    a > i
       font-size: 2rem
-    
-    a:hover 
+
+    a:hover
       cursor: pointer
+
       span 
         left: 0
         width: 100%
 
-  .header_hamburger 
+  .header_hamburger
     display: none
     cursor: pointer
     transition: all 0.3s ease
-    .bar 
+
+    .bar
       display: block
       width: 30px
       height: 3px
@@ -70,13 +72,12 @@ header
       background-color: var(--Text)
       transition: all 0.3s ease
 
-@media (max-width: 1186px) 
-  #header_profile_picture 
+@media (max-width: 1186px)
+  #header_profile_picture
     margin: 0 20px !important
     transition: none !important
-  
 
-  .header_user_menu 
+  .header_user_menu
     width: 100%
     position: fixed
     top: -20vh
@@ -87,22 +88,23 @@ header
     padding: 20px
     opacity: 0
 
-    a > span 
+    a > span
       border-bottom: solid 2px transparent !important
       transition: none !important
 
-  .header_user_menu.active 
+  .header_user_menu.active
     opacity: 1
     top: 9.9vh
     background-color: var(--Base2)
-  
 
-  header 
-    .header_user_menu 
-      a:hover 
+  header
+
+    .header_user_menu
+
+      a:hover
         color: var(--Text)
 
-  .header_hamburger 
+  .header_hamburger
     display: block !important
     position: relative
     top: 50%
@@ -110,13 +112,19 @@ header
     height: -moz-fit-content
     height: fit-content
     margin-right: 5%
-  
-  .header_hamburger.active 
-    .bar:nth-child(2) 
+
+  .header_hamburger.active
+
+    .bar:nth-child(2)
       opacity: 0
 
-    .bar:nth-child(1) 
+    .bar:nth-child(1)
       transform: translateY(8px) rotate(45deg)
 
-    .bar:nth-child(3) 
+    .bar:nth-child(3)
       transform: translateY(-8px) rotate(-45deg)
+
+  // https://www.youtube.com/watch?v=TbVSO0RIQsg
+  // https://www.youtube.com/watch?v=0ee7EB641wI
+  // https://www.youtube.com/watch?v=oDDcZhKqUxQ
+  // java

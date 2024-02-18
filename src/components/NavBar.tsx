@@ -11,11 +11,11 @@ export default function NavBar() {
         </a>
         <ul className="header_user_menu">
           <a href="/contact">
-            Contato
+            Contact
             <span />
           </a>
           <a href="/about">
-            Sobre
+            About
             <span />
           </a>
           <a href="/user">

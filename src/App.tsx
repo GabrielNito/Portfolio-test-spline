@@ -12,12 +12,12 @@ function App() {
 
   return (
     <>
-      <NavBar />
-      <Home />
       <Spline
         id="spline_canvas"
         scene="https://prod.spline.design/70RaS4z8xvrh5Jvo/scene.splinecode"
       />
+      <NavBar />
+      <Home />
     </>
   );
 }
