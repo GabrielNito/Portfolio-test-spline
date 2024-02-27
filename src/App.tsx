@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import NavBar from "./components/NavBar";
 import NavBarJS from "./scripts/NavBar";
 import Home from "./components/Home";
-import Spline from "@splinetool/react-spline";
+import Content_Image from "./components/Content";
 
 function App() {
   useEffect(() => {
@@ -12,12 +12,9 @@ function App() {
 
   return (
     <>
-      <Spline
-        id="spline_canvas"
-        scene="https://prod.spline.design/70RaS4z8xvrh5Jvo/scene.splinecode"
-      />
       <NavBar />
       <Home />
+      <Content_Image />
     </>
   );
 }

@@ -2,7 +2,9 @@ const Home = () => {
   return (
     <section id="home">
       <div id="home_content">
-        <h1 className="test">Hi, I'm Gabriel Nito</h1>
+        <h1 className="test">
+          Hi, I'm <span className="text_gradient">Gabriel Nito</span>
+        </h1>
         <h2 className="test">
           Front-end Developer | Aspiring Cybersecurity Specialist
         </h2>

@@ -9,8 +9,18 @@ header
     width: 100%
     height: 10vh
     padding: 0.625rem
-    background: linear-gradient(var(--Base), transparent)
+    background: linear-gradient(var(--Base2), transparent)
     justify-content: space-between
+    align-items: center
+    padding: 1rem 3rem
+
+    a
+      font-weight: 500
+      text-decoration: none
+      font-size: 1.5rem
+
+    > a:nth-child(1)
+      font-weight: 700
 
     #header_profile_picture
       margin-left: 50px
@@ -18,17 +28,11 @@ header
       display: flex
       text-decoration: none
 
-      #profile_picture_image
-        width: 7.5vh
-        height: 7.5vh
-        object-fit: cover
-      
   .header_user_menu
     display: flex
     align-items: center
     justify-content: center
     gap: 20px
-    margin: 20px 100px 20px 50px
     transition: all 0.3s ease
 
     a
@@ -112,7 +116,6 @@ header
     margin-right: 5%
 
   .header_hamburger.active
-
     .bar:nth-child(2)
       opacity: 0
 
@@ -121,14 +124,3 @@ header
 
     .bar:nth-child(3)
       transform: translateY(-8px) rotate(-45deg)
-
-  // https://www.youtube.com/watch?v=TbVSO0RIQsg
-  // https://www.youtube.com/watch?v=0ee7EB641wI
-  // https://www.youtube.com/watch?v=oDDcZhKqUxQ
-  // java
-
-    // https://www.youtube.com/watch?v=5O0YDHiosD0
-    // https://www.youtube.com/watch?v=noUaHBlYz_o
-    // https://www.youtube.com/watch?v=cTxpcFdAxOI
-
-    // https://www.youtube.com/watch?v=h06KIgcPUnU

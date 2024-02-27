@@ -12,17 +12,18 @@
     gap: 1rem
 
     h1
-      font-size: 5rem
+      font-size: 7rem
 
     h2 
       font-size: 3rem
 
-    .highlight-text
+
+    .highlight_text
       padding: 0 5px
       position: relative
-      animation: highlight-text .5s ease-in forwards
+      animation: highlight_text .5s ease-in forwards
 
-    .highlight-text::before
+    .highlight_text::before
       content: ""
       position: absolute
       left: 0
@@ -33,14 +34,22 @@
       z-index: -1
       transform-origin: 0 0
       transform: scaleX(0)
-      animation: highlight-text .3s ease forwards
+      animation: highlight_text .3s ease forwards
       animation-timing-function: cubic-bezier(0, 0, 0, 1)
       animation-delay: .3s
 
 .test 
   animation: transformY .5s ease forwards
 
-@keyframes highlight-text 
+.text_gradient
+  position: relative
+  background: linear-gradient(325deg,rgba(140,170,238,1) 0%, var(--Accent) 50%,rgba(140,170,238,1))
+  background: linear-gradient(325deg,rgba(140,170,238,1) 0%, var(--Accent) 100%)
+  font-weight: 800
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+@keyframes highlight_text 
   to
     transform: scaleX(1)
 
@@ -64,10 +73,10 @@
     h2 
       font-size: 1.25rem !important
 
-    .highlight-text
+    .highlight_text
       padding: 0 5px
       position: relative
       animation: none !important
 
-    .highlight-text::before
+    .highlight_text::before
       animation: none !important

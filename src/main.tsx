@@ -5,6 +5,8 @@ import App from "./App.tsx";
 import "./css/global.sass";
 import "./css/Home.sass";
 import "./css/NavBar.sass";
+import "./css/Content.sass";
+import "./css/main.sass";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
