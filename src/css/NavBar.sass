@@ -90,6 +90,7 @@ header
     flex-direction: column
     z-index: -1
     padding: 20px
+    padding-top: calc(10vh + 20px)
     opacity: 0
 
     a > span
@@ -98,7 +99,7 @@ header
 
   .header_user_menu.active
     opacity: 1
-    top: 9.9vh
+    top: 0vh
     background-color: var(--Base2)
 
   header
@@ -109,7 +110,8 @@ header
   .header_hamburger
     display: block !important
     position: relative
-    top: 50%
+    top: 25%
+    left: 2.5%
     transform: translateY(-50%)
     height: -moz-fit-content
     height: fit-content
