@@ -1,28 +1,27 @@
 export default function MomentumScroll() {
     const body = document.body;
-    const root = document.querySelector('#root');
-    let scrolledY = 0
-    let rootY = 0
+    const root = document.getElementById('root');
 
-    console.log(body.scrollHeight, root.scrollHeight);
-
-    body.style.height = root.scrollHeight + 'px';
-    root.style.position = 'fixed';
-    root.style.top = 0;
-    root.style.left = 0;
+    let scroll = { x: 0, y: 0 }
+    let distance = { x: 0, y: 0 }
 
     window.addEventListener('scroll', easeScroll);
 
     function easeScroll() {
-        scrolledY = window.scrollY;
+        scroll.x = window.scrollX;
+        scroll.y = window.scrollY;
     }
 
     window.requestAnimationFrame(render);
 
     function render() {
-        rootY = li(rootY, scrolledY, 0.05);
-        rootY = Math.floor(rootY * 100) / 100;
-        root.style.transform = `translateY(-${rootY}px)`;
+        distance.x = li(distance.x, scroll.x, 1);
+        distance.y = li(distance.y, scroll.y, 1);
+
+        distance.x = Math.floor(distance.x * 100) / 100;
+        distance.y = Math.floor(distance.y * 100) / 100;
+
+        root.scroll(distance.x, distance.y)
         window.requestAnimationFrame(render);
     }
 

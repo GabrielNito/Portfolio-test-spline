@@ -19,3 +19,14 @@ html::-webkit-scrollbar-thumb:hover
 
 html::-webkit-scrollbar-button 
     display: none
+
+#cursor
+    --circle-size: 1.5rem
+    position: fixed
+    top: calc(var(--circle-size) / 2 * -1)
+    left: calc(var(--circle-size) / 2 * -1)
+    border: solid 1px var(--Text)
+    border-radius: 50%
+    width: var(--circle-size)
+    height: var(--circle-size)
+    pointer-events: none
