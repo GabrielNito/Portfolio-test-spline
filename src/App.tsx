@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 
-// import MomentumScroll from "./scripts/MomentumScroll";
 import cursor from "./scripts/cursor";
 import NavBarJS from "./scripts/NavBar";
 
@@ -10,7 +9,6 @@ import Content_Image from "./components/Content";
 
 function App() {
   useEffect(() => {
-    // MomentumScroll();
     cursor();
     NavBarJS();
   }, []);
