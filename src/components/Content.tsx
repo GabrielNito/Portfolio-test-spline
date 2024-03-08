@@ -14,6 +14,7 @@ const Content_Image = () => {
           </p>
         </div>
       </div>
+
       <div className="content_image_container">
         <div className="content_container">
           <h1>Content</h1>
