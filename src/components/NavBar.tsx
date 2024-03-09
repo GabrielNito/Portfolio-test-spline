@@ -4,6 +4,10 @@ export default function NavBar() {
       <nav id="navbar">
         <a href="/">Gabriel Nito</a>
         <ul className="header_user_menu">
+          <a href="/">
+            Home
+            <span />
+          </a>
           <a href="/contact">
             Contact
             <span />

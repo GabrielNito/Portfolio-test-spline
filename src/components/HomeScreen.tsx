@@ -1,14 +1,14 @@
-const Home = () => {
+const HomeScreen = () => {
   return (
     <section id="home">
       <div id="home_content">
-        <h1 className="test">
+        <h1 className="animationTarget">
           Hi, I'm <span className="text_gradient">Gabriel Nito</span>
         </h1>
-        <h2 className="test">
+        <h2 className="animationTarget">
           Front-end Developer | Aspiring Cybersecurity Specialist
         </h2>
-        <p className="test">
+        <p className="animationTarget">
           A computer network student with a{" "}
           <span className="highlight-text">cybersecurity vision</span>. My focus
           is on{" "}
@@ -22,4 +22,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeScreen;
