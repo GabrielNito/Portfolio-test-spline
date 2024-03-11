@@ -1,5 +1,4 @@
 import Spline from "@splinetool/react-spline";
-
 const Content_Image = () => {
   var isMobile = {
     Android: function () {
