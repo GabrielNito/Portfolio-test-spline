@@ -4,7 +4,7 @@ const Projects = () => {
   useEffect(() => {
     const projects = document.querySelectorAll(".project");
     projects.forEach((project) => {
-      project.addEventListener("click", (e) => {
+      project.addEventListener("click", () => {
         console.log(project);
       });
     });
