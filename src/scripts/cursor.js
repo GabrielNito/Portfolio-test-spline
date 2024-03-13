@@ -9,11 +9,6 @@ export default function cursor() {
         onmousemove = function (e) {
             const keyframes = { transform: `translate(${e.x}px, ${e.y}px)` }
             cursorDot.style.transform = keyframes.transform
-
-            cursorDot.animate(keyframes, {
-                duration: 300,
-                fill: "forwards"
-            });
         }
     }
     mobileDetect(animateCursor)

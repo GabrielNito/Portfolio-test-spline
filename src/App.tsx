@@ -9,6 +9,7 @@ import NavBar from "./components/NavBar";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import About from "./Pages/About";
+import ScrollTop from "./components/ScrollToTop";
 
 function App() {
   useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
     <>
       <div id="cursor"></div>
       <NavBar />
+      <ScrollTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />

@@ -16,6 +16,10 @@ export default function NavBar() {
             About
             <span />
           </a>
+          <a href="#projects">
+            Projects
+            <span />
+          </a>
         </ul>
         <div className="header_hamburger">
           <span className="bar"></span>
