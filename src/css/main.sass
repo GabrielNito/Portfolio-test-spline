@@ -55,31 +55,6 @@ html::-webkit-scrollbar-button
   animation: highlight .3s ease forwards
   animation-delay: 300ms
 
-
-#scroll_to_top
-    position: fixed
-    z-index: 998
-    bottom: 4rem
-    right: 4rem
-    width: 4rem
-    height: 4rem
-    background-color: var(--Base)
-    border: solid 2px var(--Text)
-    border-radius: 50%
-    display: flex
-    justify-content: center
-    align-items: center
-    opacity: 0
-    scale: 0
-    transition: all .3s ease
-
-    i 
-        font-size: 1.5rem
-
-#scroll_to_top.visible
-    opacity: 1
-    scale: 1
-
 @keyframes highlight
     to 
         width: 100%

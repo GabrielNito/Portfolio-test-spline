@@ -8,6 +8,7 @@ import "./css/Home.sass";
 import "./css/NavBar.sass";
 import "./css/Content.sass";
 import "./css/Projects.sass";
+import "./css/ScrollToTop.sass";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
