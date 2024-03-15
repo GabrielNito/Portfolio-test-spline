@@ -1,52 +1,45 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const Project_Description_P = ({ title, description }: Props) => {
+  return (
+    <div className="projects_description_container">
+      <h1>{title}</h1>
+      <p
+        className="projects_description_p"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
+    </div>
+  );
+};
 
 const Projects = () => {
   useEffect(() => {
-    const project1 = document.querySelector(".project-1");
-    const project2 = document.querySelector(".project-2");
+    const container = document.querySelector(".description-container");
 
-    const defaultText = `These are the most important projects that i've done so far.
-    <br />
-    Hover over them to see more about them`;
-
-    function changeText(description: string) {
-      document
-        .querySelector("#projects_description_p")
-        ?.classList.add("transition");
-      setTimeout(() => {
-        document.querySelector("#projects_description_p")?.remove();
-        const p = document.createElement("p");
-        p.setAttribute("id", "projects_description_p");
-        p.classList.add("hidden");
-        p.innerHTML = description;
-        document
-          .querySelector("#projects_description_container")
-          ?.firstChild?.appendChild(p);
-        setTimeout(() => {
-          document
-            .querySelector("#projects_description_p")
-            ?.classList.remove("hidden");
-        }, 300);
-      }, 300);
+    if (container?.querySelector("h1")?.innerHTML == "Projects") {
+      container.classList.remove("fade-out");
     }
-
-    project1?.addEventListener("mouseover", () => {
-      changeText(
-        "Further projects will be available as soon as they'll be developed"
-      );
-    });
-    project1?.addEventListener("mouseout", () => {
-      changeText(defaultText);
-    });
-    project2?.addEventListener("mouseover", () => {
-      changeText(
-        "Further projects will be available as soon as they'll be developed"
-      );
-    });
-    project2?.addEventListener("mouseout", () => {
-      changeText(defaultText);
-    });
   }, []);
+
+  const [showDescription, setShowDescription] = useState(false);
+  const [description, setDescription] = useState({
+    title: "Projects",
+    description:
+      "These are the most important projects that i've done so far.<br />Hover over them to see more about",
+  });
+
+  const handleMouseOver = (title: string, description: string) => {
+    setShowDescription(false);
+    setTimeout(() => {
+      setDescription({ title, description });
+      setShowDescription(true);
+    }, 300);
+  };
 
   return (
     <section id="projects">
@@ -54,31 +47,47 @@ const Projects = () => {
         <div className="projects_columns">
           <span className="projects_boxes color-1" />
           <span className="projects_boxes color-3" />
-          <div className="project project-1 projects_boxes">
-            <h1>Soon...</h1>
+          <div
+            className="project project-1 projects_boxes"
+            onClick={() =>
+              handleMouseOver(
+                "Coming Soon...",
+                "Future projects will be displayed here"
+              )
+            }
+          >
+            <h1>Coming</h1>
           </div>
           <span className="projects_boxes color-2" />
         </div>
 
         <div className="projects_columns">
           <span className="projects_boxes" />
-          <div className="project project-2 projects_boxes">
-            <h1>Coming</h1>
+          <div
+            className="project project-2 projects_boxes"
+            onClick={() =>
+              handleMouseOver(
+                "Coming Soon...",
+                "Future projects will be displayed here"
+              )
+            }
+          >
+            <h1>Soon...</h1>
           </div>
           <span className="projects_boxes color-2" />
           <span className="projects_boxes color-1" />
         </div>
       </div>
 
-      <div id="projects_description_container">
-        <div>
-          <h1>Projects</h1>
-          <p id="projects_description_p">
-            These are the most important projects that i've done so far.
-            <br />
-            Hover over them to see more about them
-          </p>
-        </div>
+      <div
+        className={`description-container ${
+          showDescription ? "fade-in" : "fade-out"
+        }`}
+      >
+        <Project_Description_P
+          title={description.title}
+          description={description.description}
+        />
       </div>
     </section>
   );

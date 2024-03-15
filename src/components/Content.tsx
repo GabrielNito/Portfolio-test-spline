@@ -43,16 +43,15 @@ const Content_Image = () => {
       </div>
 
       <div className="animationTarget content_image_container">
-        <div className="animationTarget content_container">
-          <h1>Ferramentas</h1>
-          <p>Experiencia com Linux, especialmente Archlinux</p>
-        </div>
-
         {isMobile.any() ? (
           <img src="/Archlinux.png" alt="" />
         ) : (
           <Spline scene="https://prod.spline.design/73N71Qgl8ZoFr2os/scene.splinecode" />
         )}
+        <div className="animationTarget content_container">
+          <h1>Ferramentas</h1>
+          <p>Experiencia com Linux, especialmente Archlinux</p>
+        </div>
       </div>
     </section>
   );
