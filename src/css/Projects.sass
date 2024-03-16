@@ -1,7 +1,6 @@
 #projects
     background-color: var(--Base)
     height: 100svh
-    // padding: 10rem 40%
     display: flex
     flex-direction: column
     justify-content: center
@@ -76,12 +75,13 @@
     .description-container
         transition: all .3s ease
 
-#projects:hover
+#projects:hover,
+#projects.mobile
     #projects_container
         width: 20%
         translate: -100% 0
 
-         .projects_columns:nth-child(1)
+        .projects_columns:nth-child(1)
             transform: translateY(-10%)
 
         .projects_columns:nth-child(2)
@@ -89,6 +89,7 @@
 
     .projects_description_container
         opacity: 1
+
 
 .fade-in 
     opacity: 1
@@ -132,3 +133,54 @@
     background-color: var(--color-3) !important
     border-color: var(--color-3) !important
     box-shadow: 0 10px 16px 0px var(--color-3-shadow) !important
+
+
+
+
+@media (max-width: 1416px)
+    #projects:hover,
+    #projects.mobile
+        #projects_container
+            padding: 0
+            width: 100%
+            transform: rotate(90deg) scale(.25)
+            translate: 0 -10%
+
+            .projects_columns
+                div
+                    transform: rotate(-90deg)
+                    > * 
+                        transform: scale(3)
+
+        .projects_description_container
+            width: 75%
+            top: 55%
+            left: 50%
+
+            translate: -50% 0 
+            transition: all .3s ease
+
+            h1
+                font-size: 2rem
+            p
+                font-size: 1rem
+
+@media (max-width: 774px)
+    #projects:hover,
+    #projects.mobile
+        height: 75svh
+        #projects_container
+            transform: rotate(90deg) scale(.30)
+            .projects_columns
+                div
+                    > * 
+                        transform: scale(2)
+
+@media (max-width: 440px)
+    #projects:hover,
+    #projects.mobile
+        #projects_container
+            .projects_columns
+                div
+                    > * 
+                        transform: scale(1.5)

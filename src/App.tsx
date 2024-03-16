@@ -20,7 +20,6 @@ function App() {
 
   return (
     <>
-      <div id="cursor"></div>
       <NavBar />
       <ScrollTop />
       <Routes>

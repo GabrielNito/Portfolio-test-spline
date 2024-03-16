@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { isMobile } from "../scripts/isMobile";
 
 interface Props {
   title: string;
@@ -40,6 +41,12 @@ const Projects = () => {
       setShowDescription(true);
     }, 300);
   };
+
+  useEffect(() => {
+    if (isMobile.any()) {
+      document.querySelector("#projects")?.classList.add("mobile");
+    }
+  }, []);
 
   return (
     <section id="projects">

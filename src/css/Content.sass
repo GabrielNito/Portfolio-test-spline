@@ -33,28 +33,30 @@
 
 @media (max-width: 1312px)
     #content_image
-        padding: 5rem 12.5%
+        padding: 5rem 5%
+        flex-direction: column
         
         .content_image_container
-            flex-direction: column
+            gap: 0
+            width: 100%
+            // flex-direction: row
             margin: 0
 
             img
-                width: 75%
+                width: 100%
 
             .content_container
-                padding: 1rem 0
-                width: 90%
+                padding: 1 0
+                width: 100%
 
             div:has(canvas)
                 width: 75% !important
-                
-        .content_image_container:nth-child(2)
-            flex-direction: column-reverse
 
             > .content_container
                 p, h1
                     text-align: left !important
+                h1
+                    font-size: 2rem
 
 @media (max-width: 871px)
     #content_image
@@ -68,7 +70,7 @@
 
 @media (max-width: 583px)
     #content_image
-        padding: 1rem 10%
+        padding: 1rem 5%
 
         .content_image_container
             margin: 0
@@ -76,8 +78,8 @@
 @media (max-width: 496px)
     #content_image
         .content_image_container
-            img
-                width: 100%
+            // img
+            //     width: 100%
 
             div:has(canvas)
                 width: 200% !important
