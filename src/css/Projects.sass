@@ -1,5 +1,4 @@
 #projects
-    background-color: var(--Base)
     height: 100svh
     display: flex
     flex-direction: column
@@ -37,8 +36,9 @@
                 transform: scale(1.15)
 
             .project
-                background-color: var(--Base)
+                background-color: var(--Base-2)
                 box-shadow: 0 10px 16px 0px var(--Base-shadow)
+                border: solid 1px white
 
                 display: flex
                 justify-content: center
@@ -82,10 +82,10 @@
         translate: -100% 0
 
         .projects_columns:nth-child(1)
-            transform: translateY(-10%)
+            transform: translateY(-5%)
 
         .projects_columns:nth-child(2)
-            transform: translateY(10%)
+            transform: translateY(5%)
 
     .projects_description_container
         opacity: 1
@@ -133,9 +133,6 @@
     background-color: var(--color-3) !important
     border-color: var(--color-3) !important
     box-shadow: 0 10px 16px 0px var(--color-3-shadow) !important
-
-
-
 
 @media (max-width: 1416px)
     #projects:hover,

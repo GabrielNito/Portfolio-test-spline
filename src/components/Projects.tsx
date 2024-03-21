@@ -31,10 +31,10 @@ const Projects = () => {
   const [description, setDescription] = useState({
     title: "Projects",
     description:
-      "These are the most important projects that i've done so far.<br />Hover over them to see more about",
+      "These are the most important projects that i've done so far.<br />Click them to see more about",
   });
 
-  const handleMouseOver = (title: string, description: string) => {
+  const handleClick = (title: string, description: string) => {
     setShowDescription(false);
     setTimeout(() => {
       setDescription({ title, description });
@@ -57,7 +57,7 @@ const Projects = () => {
           <div
             className="project project-1 projects_boxes"
             onClick={() =>
-              handleMouseOver(
+              handleClick(
                 "Coming Soon...",
                 "Future projects will be displayed here"
               )
@@ -73,7 +73,7 @@ const Projects = () => {
           <div
             className="project project-2 projects_boxes"
             onClick={() =>
-              handleMouseOver(
+              handleClick(
                 "Coming Soon...",
                 "Future projects will be displayed here"
               )
