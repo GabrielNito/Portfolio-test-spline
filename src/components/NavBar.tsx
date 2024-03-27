@@ -1,32 +1,29 @@
+import { useEffect } from "react";
+import { isMobile } from "../scripts/isMobile";
+
 export default function NavBar() {
+  useEffect(() => {
+    if (isMobile.any()) {
+      document.querySelectorAll(".navbar_link").forEach((element) => {
+        element.classList.add("mobile");
+      });
+    }
+  }, []);
+
   return (
-    <header>
-      <nav id="navbar">
-        <a href="/">Gabriel Nito</a>
-        <ul className="header_user_menu">
-          <a href="/">
-            Home
-            <span />
-          </a>
-          <a href="/contact">
-            Contact
-            <span />
-          </a>
-          <a href="/about">
-            About
-            <span />
-          </a>
-          <a href="#projects">
-            Projects
-            <span />
-          </a>
-        </ul>
-        <div className="header_hamburger">
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </div>
-      </nav>
-    </header>
+    <div className="side_navbar">
+      <a href="#home" className="navbar_link section_1">
+        <i className="fa-solid fa-house" />
+        <span className="navbar_span">Home</span>
+      </a>
+      <a href="#about" className="navbar_link section_2">
+        <i className="fa-solid fa-bars-staggered" />
+        <span className="navbar_span">About</span>
+      </a>
+      <a href="#projects" className="navbar_link section_3">
+        <i className="fa-solid fa-code" />
+        <span className="navbar_span">Projects</span>
+      </a>
+    </div>
   );
 }

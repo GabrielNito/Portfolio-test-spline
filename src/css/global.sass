@@ -2,6 +2,7 @@
 
 :root 
   --Base: #FAF9F6
+  --Base-2: #edece9
   --Text: black
   --Highlight: #dce0e8
   --Accent: #bf94e4
@@ -15,19 +16,15 @@
   --color-1-shadow: rgba(173,97,99,.25)
   --color-2-shadow: rgba(115,157,164,.25)
   --color-3-shadow: rgba(124,157,103,.25)
-  --background-image: url('/background-light.svg')
 
-// @media (prefers-color-scheme: dark) 
-//   :root 
-//     --Base: #232634
-//     --Text: #c6d0f5
-//     --Highlight: #737994
-//     --Accent: #f4b8e4
-//     --Base-shadow: rgba(17,19,26,.5)
-//     --Base: #171717
-//     --Base-2: #222
-
-//     --background-image: url('/background-dark.svg')
+@media (prefers-color-scheme: dark) 
+  :root 
+    --Text: #c6d0f5
+    --Highlight: #737994
+    --Accent: #f4b8e4
+    --Base-shadow: rgba(17,19,26,.5)
+    --Base: #171717
+    --Base-2: #222
 
 *
   margin: 0
@@ -41,7 +38,9 @@
 
 
 body 
-  background-image: var(--background-image)
+  background-color: var(--Base)
+  background-image: linear-gradient(to bottom, transparent, transparent 10%, var(--Base) 10%), linear-gradient(to right, var(--Base-2), var(--Base-2) 10%, var(--Base) 10%), radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)
+  background-size: 30px 30px
   
 #spline_canvas
   position: absolute

@@ -1,130 +1,100 @@
-header
-  width: 100%
-  position: sticky
-  top: 0
-  z-index: 890
+.side_navbar
+  display: flex
+  flex-direction: column
+  gap: 2.5rem
+  align-content: center
+  width: fit-content
+  
+  position: fixed
+  top: 50%
+  left: 1rem
+  translate: 0 -50%
 
-  #navbar
-    display: flex
-    width: 100%
-    height: 10vh
-    background: linear-gradient(var(--Base), transparent)
-    justify-content: space-between
-    align-items: center
-    padding: 1rem 3rem
+  z-index: 998
 
-    a
-      font-weight: 500
-      text-decoration: none
-      font-size: 1.5rem
-      cursor: none
-
-    > a:nth-child(1)
-      font-weight: 700
-
-    #header_profile_picture
-      margin-left: 50px
-      height: -moz-fit-content
-      height: fit-content
-      display: flex
-      text-decoration: none
-
-  .header_user_menu
+  .navbar_link
+    padding: .75rem
+    text-decoration: none
+    position: relative
+    text-align: center
     display: flex
     align-items: center
     justify-content: center
-    gap: 20px
-    transition: all 0.3s ease
+    cursor: none
 
-    a
-      position: relative
-      height: -moz-fit-content
-      height: fit-content
-      text-decoration: none
-      padding: 10px 12px
+    i
+      width: 2rem
+      scale: 1
+      transition: all .3s ease
       font-size: 1.5rem
-      color: var(--Text)
-    
-    a > span
+
+    span
+      border: solid 1px var(--Text)
+      border-radius: .5rem
+      background-color: var(--Base-2)
+      padding: .25rem 1rem
       position: absolute
-      bottom: 0
-      left: 50%
-      width: 0
-      border-bottom: solid 2px var(--Text)
-      transition: all 0.3s ease
-    
-    a > i
-      font-size: 2rem
+      left: 1rem
+      opacity: 0
+      scale: 0    
 
-    a:hover
+      transition: all .3s ease
 
-      span 
-        left: 0
-        width: 100%
-
-  .header_hamburger
-    display: none
-    transition: all 0.3s ease
-
-    .bar
-      display: block
-      width: 30px
-      height: 3px
-      border-radius: 2px
-      margin: 5px auto
-      background-color: var(--Text)
-      transition: all 0.3s ease
+  .navbar_link:hover,
+  .navbar_link.show
+    i
+      scale: 1.25
+    span
+      left: 4.5rem
+      opacity: 1
+      scale: 1
+  
+  .navbar_link.mobile:hover
+    i
+      scale: 1.25
+    span
+      display: none
 
 @media (max-width: 1186px)
-  #navbar
-    padding: 1rem 1.5rem !important
+  .side_navbar
+    flex-direction: row
+    top: 1rem
+    left: 50%
+    translate: -50% 0
+    a
+      span
+        opacity: 0
+        scale: 1
 
-  #header_profile_picture
-    margin: 0 20px !important
-    transition: none !important
+    a:hover
+      i
+        scale: 1
+      span
+          left: 1rem
+          opacity: 0
+          scale: 1
 
-  .header_user_menu
-    width: 100%
-    position: fixed
-    top: -20vh
-    left: 0
-    margin: 0 !important
-    flex-direction: column
-    z-index: -1
-    padding: 20px
-    padding-top: calc(10vh + 20px)
-    opacity: 0
-
-    a > span
-      border-bottom: solid 2px transparent !important
-      transition: none !important
-
-  .header_user_menu.active
-    opacity: 1
-    top: 0vh
+@media (max-width: 500px)
+  .side_navbar
     background-color: var(--Base)
+    height: 8svh
+    width: 100vw
+    gap: 1.5rem
+    top: auto
+    left: 0
+    bottom: 0
+    translate: 0 0
+    justify-content: center
+    a
+      span
+        opacity: 0
+        scale: 1
 
-  header
-    .header_user_menu
-      a:hover
-        color: var(--Text)
+    a:hover
+      i
+        scale: 1
+      span
+          left: 1rem
+          opacity: 0
+          scale: 1
 
-  .header_hamburger
-    display: block !important
-    position: relative
-    top: 25%
-    left: 2.5%
-    transform: translateY(-50%)
-    height: -moz-fit-content
-    height: fit-content
-    margin-right: 5%
-
-  .header_hamburger.active
-    .bar:nth-child(2)
-      opacity: 0
-
-    .bar:nth-child(1)
-      transform: translateY(8px) rotate(45deg)
-
-    .bar:nth-child(3)
-      transform: translateY(-8px) rotate(-45deg)

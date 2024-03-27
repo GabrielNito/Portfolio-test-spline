@@ -1,6 +1,15 @@
+import { useEffect } from "react";
+import { isMobile } from "../scripts/isMobile";
+
 const HomeScreen = () => {
+  useEffect(() => {
+    if (isMobile.any()) {
+      document.querySelector("#home")?.classList.add("mobile");
+    }
+  }, []);
+
   return (
-    <section id="home">
+    <section id="home" className="section section_1">
       <div id="home_content">
         <h1 className="animationTarget">
           Hi, I'm <span className="text_gradient">Gabriel Nito</span>
@@ -18,6 +27,9 @@ const HomeScreen = () => {
           design.
         </p>
       </div>
+      <span className="scroll_me">
+        <i className="fa-solid fa-arrow-down"></i>
+      </span>
     </section>
   );
 };

@@ -49,7 +49,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects">
+    <section id="projects" className="section section_3">
       <div id="projects_container">
         <div className="projects_columns">
           <span className="projects_boxes color-1" />

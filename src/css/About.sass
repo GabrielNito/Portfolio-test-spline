@@ -1,9 +1,10 @@
-#content_image 
+#about 
+    background-image: radial-gradient(circle, rgba(0,0,0,0) 30%, var(--Base) 100%) 
     padding: 10rem 15%
     display: flex
     position: relative
 
-    .content_image_container
+    .about_container
         flex-direction: column
         height: 50%
         width: 50%
@@ -30,12 +31,14 @@
             aspect-ratio: 1/1
             width: 50%
 
+#about.mobile
+    background-image: none
 @media (max-width: 1312px)
-    #content_image
+    #about
         padding: 5rem 5%
         flex-direction: column
         
-        .content_image_container
+        .about_container
             gap: 0
             width: 100%
             margin: 0
@@ -57,25 +60,27 @@
                     font-size: 2rem
 
 @media (max-width: 871px)
-    #content_image
-        .content_image_container
+    #about
+        .about_container
             div:has(canvas)
                 width: 125% !important
 
 @media (max-width: 635px)
-    #content_image
+    #about
         padding: 1rem
 
 @media (max-width: 583px)
-    #content_image
+    #about
         padding: 1rem 5%
 
-        .content_image_container
+        .about_container
             margin: 0
 
 @media (max-width: 496px)
-    #content_image
-        .content_image_container
+    #about
+        .about_container
+            //     width: 100%
+
 
             div:has(canvas)
                 width: 200% !important

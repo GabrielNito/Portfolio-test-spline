@@ -1,10 +1,17 @@
 import Spline from "@splinetool/react-spline";
 import { isMobile } from "../scripts/isMobile";
+import { useEffect } from "react";
 
-const Content_Image = () => {
+const About = () => {
+  useEffect(() => {
+    if (isMobile.any()) {
+      document.querySelector("#about")?.classList.add("mobile");
+    }
+  }, []);
+
   return (
-    <section id="content_image">
-      <div className="animationTarget content_image_container">
+    <section id="about" className="section section_2">
+      <div className="animationTarget about_container">
         {isMobile.any() ? (
           <img src="/JS-TS-React.png" alt="" />
         ) : (
@@ -17,7 +24,7 @@ const Content_Image = () => {
         </div>
       </div>
 
-      <div className="animationTarget content_image_container">
+      <div className="animationTarget about_container">
         {isMobile.any() ? (
           <img src="/Archlinux.png" alt="" />
         ) : (
@@ -32,4 +39,4 @@ const Content_Image = () => {
   );
 };
 
-export default Content_Image;
+export default About;
